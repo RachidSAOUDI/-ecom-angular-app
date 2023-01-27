@@ -27,3 +27,6 @@
 * Run : `ng g c shared/components/header`
 * Run : `ng g c shared/components/select`
 * Run : `ng g c shared/components/spinner`
+
+# create component :
+* Run : `ng g c products/components/product`
