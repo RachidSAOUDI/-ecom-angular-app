@@ -4,11 +4,13 @@ import {HeaderComponent} from './components/header/header.component';
 import {RouterModule} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserModule} from "@angular/platform-browser";
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import {BrowserModule} from "@angular/platform-browser";
     HttpClientModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    SpinnerComponent
   ]
 })
 export class SharedModule { }
