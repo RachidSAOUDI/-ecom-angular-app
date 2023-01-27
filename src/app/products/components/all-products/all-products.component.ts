@@ -41,7 +41,7 @@ export class AllProductsComponent implements OnInit {
     })
   }
 
-  filterProductByCatgory(event: any) {
+  filterCatgory(event: any) {
     let value = event.target.value;
     if (value=="all"){
       this.getProducts();
@@ -56,5 +56,9 @@ export class AllProductsComponent implements OnInit {
       this.loading = false;
       this.products = result;
     })
+  }
+
+  receiveCategory(event: any) {
+
   }
 }
