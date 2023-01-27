@@ -5,26 +5,23 @@
 <div class="mt-5">
   <div class="my-2 w-25">
     <label class="my-1">Categories :</label>
-    <select class="form-control">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-      <option value="4">Option 4</option>
+    <select class="form-control" (change)="filterProductByCatgory($event)">
+      <option value="all" selected>All</option>
+      <option value="{{opt}}" *ngFor="let opt of categories">{{opt}}</option>
     </select>
   </div>
   <div class="row">
     <div class="col-md-3 col-sm-12" *ngFor="let item of products">
-      <div class="item">
+      <div class="item bg-image hover-zoom">
         <!--      <ng-container *ngFor="let item of productsList">-->
         <img src="{{item.image}}" alt="">
         <div class="body">
           <h5>{{item.title}}</h5>
-          <p>Description ...</p>
-          <p></p>
+          <p>{{item.description}}</p>
         </div>
         <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
           <button class="btn btn-success">Add to Cart</button>
-          <span>100 MAD</span>
+          <span>{{item.price}} MAD</span>
         </div>
         <!--      </ng-container>-->
       </div>
