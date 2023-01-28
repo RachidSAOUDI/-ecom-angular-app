@@ -4,6 +4,7 @@ import {AllProductsComponent} from './components/all-products/all-products.compo
 import {ProductsDetailsComponent} from './components/products-details/products-details.component';
 import {SharedModule} from "../shared/shared.module";
 import { ProductComponent } from './components/product/product.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ProductComponent } from './components/product/product.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class ProductsModule { }
